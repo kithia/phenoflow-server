@@ -1427,7 +1427,7 @@ app.delete("/phenotypes/all", async(request, response) => {
        * please add their names to keepRepsitories
        * to prevent data loss
        */ 
-      const keepRepositories = ['phenoflow'];
+      const keepRepositories = ['phenoflow-server'];
       if (!keepRepositories.includes(phenotype.name)) {
         await deletePhenotype(phenotype.name);
       }
