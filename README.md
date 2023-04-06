@@ -55,7 +55,6 @@ accordingly, which identify the commiter.
 		-	Select the created 'Organization' as the Resource owner.
 		-	Select All repositories under Repository access.
 		-	Select Read and write on all repository permissions under Permissions.
-5. Copy this token to clipboard [web/proxy/certs/gen-domain-cert.sh](web/proxy/certs/gen-domain-cert.sh).
 
 ## Install and Run
 
@@ -66,13 +65,9 @@ This is a [Node.js](https://nodejs.org/en) server written with [Express.js](http
 1. Install dependencies:
 
 ```
-npm init
+npm install
 ```
-2. Change directory:
 
-```
-cd server
-```
 2. Run server:
 ```
 node index.js 
@@ -99,6 +94,7 @@ The server runs by default on port 3000. Visit http://localhost:3000/[route] to 
 
 ## Authors
 
-[King's College London Health Informatics](https://kclhi.org),
-[Kĩthia Ngigĩ](https://github.com/kithia)
+[Kĩthia Ngigĩ](https://github.com/kithia),
+[King's College London Health Informatics](https://kclhi.org)
+
 
