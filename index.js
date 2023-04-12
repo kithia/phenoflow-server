@@ -1392,6 +1392,7 @@ app.delete("/phenotype/:name", async(request, response) => {
       if (commit.commit.message == README_COMMIT_MESSAGE &&
         commit.commit.author.name == author){
         await deletePhenotype(name);
+        isAuthorFound = true;
       }
     }
     if (!isAuthorFound) {
