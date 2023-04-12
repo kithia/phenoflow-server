@@ -1383,6 +1383,7 @@ app.delete("/phenotype/:name", async(request, response) => {
      * Searches for the author of the 
      * initial/ initialise README.md commit
      */
+    let isAuthorFound = false
     for(const commit of commits.data) {
       /** 
        * If the author matches, pushes
@@ -1392,6 +1393,9 @@ app.delete("/phenotype/:name", async(request, response) => {
         commit.commit.author.name == author){
         await deletePhenotype(name);
       }
+    }
+    if (!isAuthorFound) {
+      throw error;
     }
     
     return response.status(200).send();
